@@ -10,13 +10,35 @@ void soma(int x, int y){
     }
 }
 
+long int somaRecursiva(int x, int y){
+    if(x<=y){
+        long int soma = x;
+        long int resultado = somaRecursiva(x+1,y);
+        printf("%ld - ",resultado);
+        return soma+resultado;
+    }else{
+        return 0;
+    }
+}
+
+//produtorioRecursivo
+long int produtoriaRecursiva(int x, int y){
+ if(y>=x){
+   //long int produto=y;
+   long int resultado = produtoriaRecursiva(x,y-1);
+   printf("%ld - ", resultado);
+   return y*resultado;  
+ }
+
+
+
 int main(void){
     int x, y;
     printf("hello ");
-    printf("Digita x:");
+    printf("\nDigita x:");
     scanf("%d",&x);
-    printf("Digita y:");
+    printf("\nDigita y:");
     scanf("%d",&y);
-    soma(x,y);
+    printf("\n A soma é: %ld",somaRecursiva(x,y));
     return 0;
 }
