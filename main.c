@@ -40,5 +40,6 @@ int main(void){
     printf("\nDigita y:");
     scanf("%d",&y);
     printf("\n A soma é: %ld",somaRecursiva(x,y));
+     printf("\nA produtória é: %ld",produtoriaRecursiva(x,y));
     return 0;
 }
